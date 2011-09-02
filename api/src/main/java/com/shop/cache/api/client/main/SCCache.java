@@ -318,6 +318,18 @@ public class SCCache
 		return fManager.getConnectionList();
 	}
 
+    /**
+     * Searches for objects with keys that match the given regular expression
+     *
+     * @param expression regex
+     * @return list of matching keys
+     * @throws Exception errors
+     */
+    public List<String>			regExFindKeys(String expression) throws Exception
+    {
+        return fManager.regExFindKeys(expression);
+    }
+
 	/**
 	 * Deletes objects with keys that match the given regular expression
 	 *
