@@ -13,7 +13,16 @@
 	<script type="text/javascript">
 		$(function(){
 			$('#mce-GITHUB').prop('disabled', true);
-			$('#mce-GITHUB').val(location.pathname.split("/")[1]);
+			var value;
+			if ( (location.host.length == 0) || (location.host === 'github.com') )
+			{
+				value = location.pathname.split("/")[1];
+			}
+			else
+			{
+				value = location.host.split(".")[0];
+			}
+			$('#mce-GITHUB').val(value);
 		});
 	</script>
   </head>
