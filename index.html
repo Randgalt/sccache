@@ -23,11 +23,29 @@
 				value = location.host.split(".")[0];
 			}
 			$('#mce-GITHUB').val(value);
+
+			if ( location.host === 'netflix.github.com' )
+			{
+				$('#mce-GITHUB').prop('disabled', true);
+				$('#mce-EMAIL').prop('disabled', true);
+				$('#mce-FNAME').prop('disabled', true);
+				$('#mce-LNAME').prop('disabled', true);
+				$('#mce-EMAILTYPE-0').prop('disabled', true);
+				$('#mce-EMAILTYPE-1').prop('disabled', true);
+				$('#mce-EMAILTYPE-2').prop('disabled', true);
+				$('#mc-embedded-subscribe').hide();
+
+				$('#sample-message').show();
+			}
 		});
 	</script>
   </head>
 
   <body> 
+
+	<div id="sample-message">
+		SAMPLE
+	</div>
 	
 	<div id="heading">
 		<img src="assets/950x250_BNR_CloudPrize_Attend_v3.jpg" alt="Netflix OSS Cloud Prize" width="950" height="250">

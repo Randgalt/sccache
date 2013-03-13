@@ -35,3 +35,19 @@ body
 	left: 50%;
 	padding-top: 25px;
 }
+
+#sample-message
+{
+	position: absolute;
+	display: none;
+	color: #b9090b;
+	font-size: 150px;
+	text-align: center;
+	font-weight: bold;
+	left: 50%;
+	top: 40%;
+	margin-left: -225px;
+	z-index: 100;
+	text-shadow: 2px 2px #000000;
+	-webkit-transform: rotate(22deg);
+}
